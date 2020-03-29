@@ -10,12 +10,12 @@ class Game extends Model
         'game_name'
     ];
 
-    public function round()
+    public function rounds()
     {
         $this->hasMany('App\Round');
     }
 
-    public function node()
+    public function nodes()
     {
         $this->hasMany('App\Node');
     }

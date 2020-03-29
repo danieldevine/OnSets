@@ -10,12 +10,12 @@ class Node extends Model
         'parent', 'content'
     ];
 
-    public function player()
+    public function players()
     {
         $this->belongsTo('App\Player');
     }
 
-    public function game()
+    public function games()
     {
         $this->belongsTo('App\Game');
     }
