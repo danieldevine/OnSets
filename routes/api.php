@@ -17,3 +17,9 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+//GET routes
+Route::get('v1/games/', 'API\GameController@getGames');
+Route::get('v1/rounds/', 'API\RoundController@getRounds');
+Route::get('v1/players/', 'API\PlayerController@getPlayers');
+Route::get('v1/nodes/', 'API\NodeController@getNodes');

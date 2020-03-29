@@ -3,4 +3,4 @@
 ## Games
 
 Get all games
-`/api/games/all`
+`/api/v1/games/all`

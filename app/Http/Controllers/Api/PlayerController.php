@@ -23,7 +23,7 @@ class PlayerController extends Controller
     {
         $players = Player::All();
 
-        return $response->json($players);
+        return response()->json($players);
     }
 
     /**
@@ -36,6 +36,6 @@ class PlayerController extends Controller
     {
         $player  = Player::all();
 
-        return $response->json($player);
+        return response()->json($player);
     }
 }

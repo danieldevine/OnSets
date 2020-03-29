@@ -24,7 +24,7 @@ class NodeController extends Controller
     {
         $nodes = Node::all();
 
-        return $response->json($nodes);
+        return response()->json($nodes);
     }
 
     /**
@@ -37,6 +37,6 @@ class NodeController extends Controller
     {
         $node = Node::where('id', $id);
 
-        return $response->json($node);
+        return response()->json($node);
     }
 }

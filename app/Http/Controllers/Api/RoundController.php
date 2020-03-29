@@ -24,7 +24,7 @@ class RoundController extends Controller
     {
         $rounds = Round::all();
 
-        return $response->json($rounds);
+        return response()->json($rounds);
     }
 
     /**
@@ -37,6 +37,6 @@ class RoundController extends Controller
     {
         $round = Round::with('id', $id)->first();
 
-        return $response->json($round);
+        return response()->json($round);
     }
 }

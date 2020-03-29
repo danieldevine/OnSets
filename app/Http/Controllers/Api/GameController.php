@@ -25,7 +25,7 @@ class GameController extends Controller
     {
         $games = Game::all();
 
-        return $response->json($games);
+        return response()->json($games);
     }
 
     /**
@@ -38,6 +38,6 @@ class GameController extends Controller
     {
         $game = Game::where('id', $id)->first();
 
-        return $response->json($game);
+        return response()->json($game);
     }
 }
