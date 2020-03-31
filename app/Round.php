@@ -6,8 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Round extends Model
 {
-    public function games()
+    public function game()
     {
-        $this->belongsTo('App\Game');
+        return $this->belongsTo('App\Game');
     }
 }

@@ -5,6 +5,7 @@ namespace App\Http\Controllers\API;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Node;
+use App\Player;
 
 /**
  * Node Controller
@@ -22,7 +23,7 @@ class NodeController extends Controller
      */
     public function getNodes()
     {
-        $nodes = Node::all();
+        $nodes = Node::with('player')->get();
 
         return response()->json($nodes);
     }

@@ -15,7 +15,7 @@ class Player extends Model
         'is_admin' => false,
     ];
 
-    public function nodes()
+    public function node()
     {
         return $this->hasMany('App\Node');
     }
