@@ -12,7 +12,7 @@ class GameSeeder extends Seeder
     public function run()
     {
         factory(App\Game::class, 1)->create()->each(function ($game) {
-            $game->rounds()->save(factory(App\Round::class)->make());
+            $game->round()->save(factory(App\Round::class)->make());
         });
     }
 }

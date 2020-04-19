@@ -12,7 +12,7 @@ class PlayerSeeder extends Seeder
     public function run()
     {
         factory(App\Player::class, 25)->create()->each(function ($player) {
-            $player->nodes()->save(factory(App\Node::class)->make());
+            $player->node()->save(factory(App\Node::class)->make());
         });
     }
 }
