@@ -23,3 +23,5 @@ Route::get('v1/games/', 'API\GameController@getGames');
 Route::get('v1/rounds/', 'API\RoundController@getRounds');
 Route::get('v1/players/', 'API\PlayerController@getPlayers');
 Route::get('v1/nodes/', 'API\NodeController@getNodes');
+
+Route::get('v1/node/{id}', 'API\NodeController@getNode');

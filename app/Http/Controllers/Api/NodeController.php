@@ -36,7 +36,7 @@ class NodeController extends Controller
      */
     public function getNode($id)
     {
-        $node = Node::where('id', $id);
+        $node = Node::with('player')->where('id', $id)->first();
 
         return response()->json($node);
     }
