@@ -25,3 +25,4 @@ Route::get('v1/players/', 'API\PlayerController@getPlayers');
 Route::get('v1/nodes/', 'API\NodeController@getNodes');
 
 Route::get('v1/node/{id}', 'API\NodeController@getNode');
+Route::post('v1/node', 'API\NodeController@createNode');

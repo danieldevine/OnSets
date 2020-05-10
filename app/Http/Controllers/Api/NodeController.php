@@ -40,4 +40,42 @@ class NodeController extends Controller
 
         return response()->json($node);
     }
+
+    /**
+     * Updates a node
+     * @note not in use yet
+     * @todo implemet editing functionality on frontend
+     *
+     * @param Request $request
+     * @return void
+     */
+    public function updateNode(Request $request)
+    {
+        $node = Node::where('id', $request->id)->first();
+        $node->content = $request->content;
+        $node->save();
+
+        return response()->json($node);
+    }
+
+    /**
+     * Creates a node
+     *
+     * @param Request $request
+     * @return void
+     */
+    public function createNode(Request $request)
+    {
+        $node = new Node;
+
+        $node->parent     = $request->parent;
+        $node->content    = $request->content;
+        $node->is_active  = true;
+        $node->player_id  = 1;
+        $node->game_id    = 1;
+
+        $node->save();
+
+        return response()->json($node);
+    }
 }

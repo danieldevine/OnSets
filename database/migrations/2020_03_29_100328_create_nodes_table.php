@@ -16,7 +16,7 @@ class CreateNodesTable extends Migration
         Schema::create('nodes', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
-            $table->dateTime('closed_at', 0);
+            $table->dateTime('closed_at', 0)->nullable();
             $table->text('content');
             $table->string('parent');
             $table->boolean('is_active');
